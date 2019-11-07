@@ -1,2 +1,6 @@
-# Node Files #
-/node_modules/
+# Development folder
+.idea
+
+# Configuration file
+.env
+!.env.default
