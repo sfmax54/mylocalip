@@ -1,10 +1,13 @@
 
 const express = require('express');
 const app = express();
-var path = require('path');
 
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname + '/index.html'));
+  var ip = req.headers['x-forwarded-for'] || 
+     req.connection.remoteAddress || 
+     req.socket.remoteAddress ||
+     (req.connection.socket ? req.connection.socket.remoteAddress : null);
+  res.send(ip);
 })
 
 app.listen(3010, function () {

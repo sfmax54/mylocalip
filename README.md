@@ -1,11 +1,7 @@
 Docker container 
 
-# Works like 
+# Return your ip
 
-http://net.ipcalf.com
-
-# Code source
-
-https://gist.github.com/pedrouid/befbafadad13660d6bb647ce137dc188
+Only if you are behind a squid proxy
 
 
