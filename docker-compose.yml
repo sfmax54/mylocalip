@@ -6,10 +6,12 @@ services:
             args:
                 - image=${APP_IMAGE}
         container_name: ${APP_CONTAINER_NAME}
-        user: node
         restart: always
         volumes:
-            - ./app/app.js:/src/app.js
+            - ./app/app.ts:/src/app.ts
+            - ./app/controller:/src/controller
+            - ./app/middleware:/src/middleware
+            - ./app/tsconfig.json:/src/tsconfig.json
         ports:
             - '${APP_PORT}:3000'
         environment:
