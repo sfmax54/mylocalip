@@ -9,7 +9,7 @@ services:
         user: node
         restart: always
         volumes:
-            - ./app:/src/app
+            - ./app/app.js:/src/app.js
         ports:
             - '${APP_PORT}:3000'
         environment:
