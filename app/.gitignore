@@ -1,2 +1,12 @@
 # Dependencies
 node_modules
+
+#TypeScript generation
+app.js
+app.js.map
+
+controller/*.js
+controller/*.js.map
+
+middleware/*.js
+middleware/*.js.map

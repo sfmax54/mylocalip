@@ -4,6 +4,9 @@ ARG image
 # Pull image from argument
 FROM $image
 
+# Install global packages
+RUN npm install -g typescript
+
 # Set directory to server part
 WORKDIR /src
 
@@ -15,4 +18,5 @@ ADD package-lock.json .
 RUN npm install
 
 # Compile files and launch server
-CMD node app.js
+CMD tsc && \
+    node app.js
